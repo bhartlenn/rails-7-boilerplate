@@ -1,0 +1,12 @@
+<% flash.each do |flash_type, message| %>
+  <div class="flash_message <%= flash_type %>" 
+    data-controller="removals"
+    data-action="animationend->removals#remove"
+  >
+    <% if flash_type == "notice" %>
+      <%= raw("<span class='material-icons'>done</span> ") + message %>
+    <% elsif flash_type == "alert" %>
+      <%= raw("<span class='material-icons'>warning</span> ") + message %>
+    <% end %>
+  </div>
+<% end %>

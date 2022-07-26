@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Boilerplate</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <!-- Flash messages -->
+    <section id="flashes">
+      <%= render "layouts/flash" %>
+    </section>
+    
+    <!-- Header -->
+    <%= render "layouts/header" %>
+    
+    <!-- Main content area -->
+    <section class="main_container">
+      <%= yield %>
+    </section>
+    
+    <!-- Footer -->
+    <%= render "layouts/footer" %>
+  </body>
+</html>
