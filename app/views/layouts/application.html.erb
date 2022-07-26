@@ -12,20 +12,25 @@
   </head>
 
   <body>
+
     <!-- Flash messages -->
     <section id="flashes">
       <%= render "layouts/flash" %>
     </section>
-    
-    <!-- Header -->
-    <%= render "layouts/header" %>
-    
-    <!-- Main content area -->
-    <section class="main_container">
-      <%= yield %>
-    </section>
-    
-    <!-- Footer -->
-    <%= render "layouts/footer" %>
+
+    <div id="site_container">
+      
+      <!-- Site header: #site_header -->
+      <%= render "layouts/header" %>
+      
+      <!-- Site content area: #site_content -->
+      <section id="site_content" class="container">
+        <%= yield %>
+      </section>
+      
+      <!-- Site footer: #site_footer -->
+      <%= render "layouts/footer" %>
+
+    </div>
   </body>
 </html>

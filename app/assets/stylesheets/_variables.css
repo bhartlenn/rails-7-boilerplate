@@ -1,0 +1,16 @@
+:root {
+    --site-max-width: 2000px;
+
+    --site-background: #144D75;
+    --card-background: #0970ba;
+    
+    --heading-color: #ccd;
+    --text-color: #fff;
+    --link-color: #54d4ff;
+    
+    --btn-bg-color: #3587C3;
+    --btn-bg-hover-color: #F76F7B;
+
+    --container-padding: 1rem;
+    --card-padding: 1rem;
+}

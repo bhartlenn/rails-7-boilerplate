@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
+    background: var(--site-background);
+    color: var(--text-color);
+}
+h1,h2,h3,h4,h5,h6 {
+    color: var(--heading-color);
+}
+h1 {
+    font-size: 2rem;
+}
+h2 {
+    font-size: 1.5rem;
+}
+h3 {
+    font-size: 1.25rem;
+}
+
+a, a:link, a:visited, a:focus {
+    color: var(--link-color);
+    text-decoration: none;
+}
+a:hover, a:active {
+    border-bottom: 1px solid var(--link-color);
+}
+
+ul {
+  display: flex;
+  flex-flow: column wrap;  
+  row-gap: 0.5rem;
+}
+
+/* Flash Messages */
+#flashes {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: var(--site-max-width);
+}
+
+.flash_message {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    /* custom keyframes animation "appear-then-fade" found in _animations.css */
+    animation: appear-then-fade 4s both;
+    color: #fff;
+}
+
+.flash_message.notice {
+    background: #009a27;
+}
+
+.flash_message.alert {
+    background: #bf2c2c;
+}
+
+/** 
+ * Empty state messages that are only visible if they are they only child item of parent
+ * <div class="empty-state-msg">You haven't created any [object name]'s yet.</div>
+ **/
+.empty-state-msg {
+    display: none;
+}
+
+.empty-state-msg:only-child {
+    display: flex;
+}
+
+#site_container {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.container {
+    padding: var(--container-padding);
+}
+
+#site_header {
+    display: flex;
+    justify-content: space-between;
+}
+#account_links {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+#site_content {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#site_footer {
+    display: flex;
+    align-content: center;
+}

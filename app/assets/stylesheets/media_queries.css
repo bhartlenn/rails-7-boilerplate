@@ -1,0 +1,8 @@
+/* Any screen that is 2000px or larger will have 2000px wide site, and smaller screens will be responsive */
+@media only screen and (min-width: 2000px) {
+    .container {
+        width: 2000px;
+        margin: 0 auto;
+        padding: 1rem 0;
+    }
+}
