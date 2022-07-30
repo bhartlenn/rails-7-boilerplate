@@ -1,10 +1,13 @@
 <h1>This is a Boilerplate Rails 7 app</h1>
-<h2>The app has the following setup</h2>
+
+<h2>The app has the following setup:</h2>
 <ul>
-    <li>Pages controller for basic pages like this homepage</li>
-    <li>Devise installed, and setup to be used with HotWire</li>
+    <li>Pages controller for basic pages like this <%= link_to "Home page", pages_home_path() %></li>
+    <li>Devise installed, and <%= link_to "setup to be used with HotWire", "https://betterprogramming.pub/devise-auth-setup-in-rails-7-44240aaed4be" %></li>
 </ul>
+
 <% if !user_signed_in? %>
+    <p>Use the below links to sign in to your account, or register a new account if you haven't yet.</p>
     <%= link_to "Sign In", new_user_session_path, class: "btn block" %>
     <%= link_to "Sign Up", new_user_registration_path, class: "btn block" %>
 <% end %>

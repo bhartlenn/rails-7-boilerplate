@@ -20,11 +20,23 @@ h3 {
     font-size: 1.25rem;
 }
 
-a, a:link, a:visited, a:focus {
+/* remove default button styling */
+button {
+    background: none;
+    outline: none;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+a, a:link, a:visited, a:focus, 
+button {
     color: var(--link-color);
     text-decoration: none;
+    border-bottom: 1px solid transparent;
 }
-a:hover, a:active {
+a:hover, a:active, 
+button:hover, button:active {
     border-bottom: 1px solid var(--link-color);
 }
 
@@ -82,28 +94,46 @@ ul {
 #site_container {
     display: flex;
     flex-flow: column wrap;
+    max-width: var(--site-max-width);
+    margin: 0 auto;
 }
 
-.container {
-    padding: var(--container-padding);
-}
-
+/**
+ * Site header
+ */
 #site_header {
     display: flex;
     justify-content: space-between;
 }
 #account_links {
-    margin-left: auto;
+    margin-left: auto; /* pushes account links to the right side of header */
     display: flex;
+    flex-wrap: row wrap;
+    column-gap: 0.5rem;
     align-items: center;
+    
 }
 
+/**
+ * Site content
+ */
 #site_content {
     display: flex;
     flex-flow: column wrap;
 }
 
+/**
+ * Home page content
+ */
+.pages_home #site_content {
+    text-align: center;
+}
+
+/**
+ * Site footer
+ */
 #site_footer {
     display: flex;
+    justify-content: center;
     align-content: center;
 }
